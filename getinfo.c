@@ -4,6 +4,7 @@
  * clear_info - initializes info_t struct
  * @info: struct address
  */
+
 void clear_info(info_t *info)
 {
 	info->arg = NULL;
@@ -17,6 +18,7 @@ void clear_info(info_t *info)
  * @info: struct address
  * @av: argument vector
  */
+
 void set_info(info_t *info, char **av)
 {
 	int i = 0;
@@ -27,7 +29,6 @@ void set_info(info_t *info, char **av)
 		info->argv = strtow(info->arg, " \t");
 		if (!info->argv)
 		{
-
 			info->argv = malloc(sizeof(char *) * 2);
 			if (info->argv)
 			{
@@ -45,10 +46,11 @@ void set_info(info_t *info, char **av)
 }
 
 /**
- * free_info - frees info_t struct fields
+ * free_info -frees info_t struct fields
  * @info: struct address
  * @all: true if freeing all fields
  */
+
 void free_info(info_t *info, int all)
 {
 	ffree(info->argv);

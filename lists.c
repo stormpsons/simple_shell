@@ -8,6 +8,7 @@
  *
  * Return: size of list
  */
+
 list_t *add_node(list_t **head, const char *str, int num)
 {
 	list_t *new_head;
@@ -101,6 +102,7 @@ size_t print_list_str(const list_t *h)
  *
  * Return: 1 on success, 0 on failure
  */
+
 int delete_node_at_index(list_t **head, unsigned int index)
 {
 	list_t *node, *prev_node;
@@ -118,6 +120,7 @@ int delete_node_at_index(list_t **head, unsigned int index)
 		return (1);
 	}
 	node = *head;
+
 	while (node)
 	{
 		if (i == index)
@@ -140,6 +143,7 @@ int delete_node_at_index(list_t **head, unsigned int index)
  *
  * Return: void
  */
+
 void free_list(list_t **head_ptr)
 {
 	list_t *node, *next_node, *head;
@@ -157,3 +161,4 @@ void free_list(list_t **head_ptr)
 	}
 	*head_ptr = NULL;
 }
+
